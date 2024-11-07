@@ -1,17 +1,29 @@
 {
 
-    "opacity": true,
-    "lossTime": 5,
-    "opacityIn": 0.3,
-    "opacityOut": 1,
-
     "cursorSrc": [
         "cursors/1.png",
         "cursors/1.png",
-        "cursors/3.png",
-        "cursors/4.png",
-        "cursors/5.png",
-        "cursors/6.png"
-    ]
+        "cursors/3.png"
+    ],
+    "removeDefaultCursor": true,
+    "padding": {
+        "X": 0,
+        "Y": 0
+    },
+    "opacity": true,
+    "lossTime": 2,
+    "opacityIn": 0.3,
+    "opacityOut": 1,
+
+
+    "click": {
+        "clickCursorSrc": [
+            "cursors/4.png",
+            "cursors/5.png",
+            "cursors/6.png"
+        ],
+        "randomCursorAfterClick": true,
+        "clickStyles": "transform: scale(110%)"
+    }
 
 }
