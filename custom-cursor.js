@@ -5,7 +5,7 @@ fetch(new URL('config.json', currentSrc))
     .then(response => {
         return response.json();
     })
-    .then(function(config) {
+    .then((config) => {
 
         const cursor = document.createElement('div');
         cursor.style.width = '32px';
@@ -28,27 +28,23 @@ fetch(new URL('config.json', currentSrc))
         }
 
         if (config.opacity) {          
-            setInterval(function() {
+            setInterval(() => {
                 i++;
-                if (i >= lastMove + config.lossTime) {
+                if (i == lastMove + config.lossTime) {
                     hideCursor();
                 }
             }, 1000)        
         }
 
-        function moveCursor() {
+        function moveCursor(event) {
             cursor.style.left = `${event.clientX + 1}px`;
             cursor.style.top = `${event.clientY + 1}px`;
             showCursor();
             lastMove = i;
         }
 
-        document.addEventListener('visibilitychange', function() {
-            console.log(document.hidden);
-        })
-
-        document.addEventListener('mousemove', function(event) {
-            moveCursor();
+        document.addEventListener('mousemove', (event) => {
+            requestAnimationFrame(() => {   moveCursor(event)  })
         })
 
     })
