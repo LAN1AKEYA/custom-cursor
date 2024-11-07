@@ -1,0 +1,17 @@
+{
+
+    "opacity": true,
+    "lossTime": 5,
+    "opacityIn": 0.3,
+    "opacityOut": 1,
+
+    "cursorSrc": [
+        "cursors/1.png",
+        "cursors/1.png",
+        "cursors/3.png",
+        "cursors/4.png",
+        "cursors/5.png",
+        "cursors/6.png"
+    ]
+
+}
